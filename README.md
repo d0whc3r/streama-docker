@@ -20,7 +20,7 @@ docker build -t streama .
 3- Run streama server
 
 ```bash
-docker run -d --name streama-server -v $PWD/streama-database:/streama -v $PWD/streama-files:/data/streama -p 8080:8080 d0whc3r/streama-docker
+docker run -d --name streama-server -v $PWD/streama-database:/streama -v $PWD/streama-files:/data/streama -p 8080:8080 d0whc3r/streama
 ```
 
 By default streama server runs with H2 database stored in /streama/database and uploads are stored in /data/streama
