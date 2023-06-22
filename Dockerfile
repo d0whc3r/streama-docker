@@ -3,7 +3,7 @@ FROM alpine:latest as getter
 RUN apk --update add curl jq
 RUN curl -sL $(curl -sL https://api.github.com/repos/streamaserver/streama/releases/latest | jq -r '.assets[].browser_download_url') -o /streama.jar
 
-FROM openjdk:8-jre-stretch
+FROM openjdk:11.0.6-jre-stretch
 
 RUN apt-get update \
     && apt-get install -y ffmpeg \
